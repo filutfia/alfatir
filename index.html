@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Alfathir Ibnu Atoillah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --secondary-blue: #3b82f6;
+            --dark-blue: #1e3a8a;
+            --bg-blue: #f0f9ff;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-blue);
+            color: #334155;
+            overflow-x: hidden;
+        }
+
+        /* Latar Belakang Partikel */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at top right, #e0f2fe, #f0f9ff);
+        }
+
+        /* Animasi Muncul per Bagian */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Efek Mengetik */
+        .typing-container {
+            display: inline-block;
+        }
+        .typing-text::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Floating Animation */
+        .float-anim {
+            animation: float 3s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Glow Card Hover */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(30, 64, 175, 0.15);
+            border-color: var(--secondary-blue);
+        }
+
+        /* Skill Bar Animation */
+        .skill-progress {
+            width: 0;
+            transition: width 2s cubic-bezier(0.1, 0.5, 0.5, 1);
+        }
+
+        /* Hero Image Glow */
+        .profile-glow {
+            position: relative;
+        }
+        .profile-glow::before {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            background: linear-gradient(45deg, var(--primary-blue), var(--secondary-blue));
+            border-radius: 2rem;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.5;
+            animation: pulse-glow 3s infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Background Canvas -->
+    <div id="particles-js"></div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+        
+        <!-- Kolom Kiri: Profil -->
+        <aside class="md:col-span-4 space-y-6 md:sticky md:top-8 h-fit reveal" id="sidebar">
+            <div class="bg-white rounded-3xl p-8 shadow-xl text-center glass-card">
+                <div class="profile-glow inline-block mb-6">
+                    <div class="w-40 h-40 rounded-3xl overflow-hidden shadow-inner">
+                        <img src="alfatir.jpeg" 
+                             alt="Foto Alfathir Ibnu" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <h1 class="text-2xl font-bold text-slate-800 typing-container">
+                    <span id="name-type" class="typing-text"></span>
+                </h1>
+                <p class="text-blue-600 font-semibold mb-6 mt-2">Siswa SMA KP Baleendah</p>
+                
+                <div class="space-y-4 text-left border-t pt-6">
+                    <div class="flex items-center gap-4 group cursor-pointer">
+                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-slate-400 uppercase font-bold">Lahir</p>
+                            <p class="text-sm font-semibold">13 Februari 2008</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-4 group cursor-pointer">
+                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-slate-400 uppercase font-bold">Telepon</p>
+                            <p class="text-sm font-semibold">0897-9768-187</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 group cursor-pointer">
+                        <div class="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] text-slate-400 uppercase font-bold">Alamat</p>
+                            <p class="text-xs leading-relaxed font-semibold">Sumbersari, Ciparay</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex justify-center gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center hover:scale-125 transition-transform float-anim">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="bg-dark-blue rounded-3xl p-8 text-white shadow-xl glass-card">
+                <h3 class="text-lg font-bold mb-6 flex items-center gap-2">
+                    <i class="fas fa-language"></i> Bahasa
+                </h3>
+                <div class="space-y-5">
+                    <div>
+                        <div class="flex justify-between text-xs mb-2 uppercase tracking-wider">
+                            <span>Indonesia</span>
+                            <span>Native</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-blue-400" data-width="100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-xs mb-2 uppercase tracking-wider">
+                            <span>Inggris</span>
+                            <span>Menengah</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="skill-progress h-full bg-blue-400" data-width="65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Kolom Kanan -->
+        <main class="md:col-span-8 space-y-8">
+            
+            <!-- Keahlian & Hobi -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <section class="glass-card p-6 rounded-3xl reveal">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-lightbulb text-blue-500 float-anim"></i> Keahlian
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-blue-600 hover:text-white transition-colors cursor-default">Kerja Tim</span>
+                        <span class="bg-blue-100 text-blue-700 px-4 py-2 rounded-xl text-sm font-semibold hover:bg-blue-600 hover:text-white transition-colors cursor-default">Problem Solving</span>
+                    </div>
+                </section>
+                
+                <section class="glass-card p-6 rounded-3xl reveal">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-gamepad text-blue-500 float-anim"></i> Hobi
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Antusias bermain game strategi untuk melatih fokus dan koordinasi tim.
+                    </p>
+                </section>
+            </div>
+
+            <!-- Pendidikan -->
+            <section class="bg-white rounded-3xl p-8 shadow-lg glass-card reveal">
+                <h3 class="text-2xl font-bold text-blue-900 mb-8 flex items-center gap-3">
+                    <i class="fas fa-user-graduate text-blue-600"></i> Riwayat Pendidikan
+                </h3>
+                <div class="space-y-10 relative before:absolute before:inset-0 before:left-4 before:h-full before:w-0.5 before:bg-blue-100">
+                    <div class="relative pl-12 group">
+                        <div class="absolute left-0 top-1 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center z-10 group-hover:scale-125 transition-transform">
+                            <i class="fas fa-school text-xs"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-800 group-hover:text-blue-600 transition-colors">SMA KP Baleendah</h4>
+                        <p class="text-blue-500 text-sm font-semibold">2023 - 2026 (Aktif)</p>
+                    </div>
+
+                    <div class="relative pl-12 group">
+                        <div class="absolute left-0 top-1 w-8 h-8 bg-blue-200 text-blue-700 rounded-full flex items-center justify-center z-10 group-hover:scale-125 transition-transform">
+                            <i class="fas fa-building text-xs"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-800">SMP Negeri 2 Ciparay</h4>
+                        <p class="text-blue-500 text-sm font-semibold">Lulus 2023</p>
+                    </div>
+
+                    <div class="relative pl-12 group">
+                        <div class="absolute left-0 top-1 w-8 h-8 bg-blue-100 text-blue-400 rounded-full flex items-center justify-center z-10 group-hover:scale-125 transition-transform">
+                            <i class="fas fa-book text-xs"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-800">SD Negeri Calengka</h4>
+                        <p class="text-blue-500 text-sm font-semibold">Lulus 2019</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prestasi & Organisasi -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <section class="bg-gradient-to-br from-blue-700 to-dark-blue p-8 rounded-3xl text-white shadow-xl group overflow-hidden relative reveal">
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                            <i class="fas fa-trophy text-yellow-400"></i> Prestasi
+                        </h3>
+                        <p class="text-blue-100 font-bold text-xl">Medali Emas</p>
+                        <p class="text-sm opacity-80 mt-1 uppercase">Olimpiade Matematika</p>
+                    </div>
+                    <i class="fas fa-award absolute -bottom-6 -right-6 text-white opacity-10 text-9xl group-hover:rotate-12 group-hover:scale-110 transition-transform duration-500"></i>
+                </section>
+
+                <section class="glass-card p-8 rounded-3xl border-l-8 border-blue-600 reveal">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-users text-blue-600"></i> Organisasi
+                    </h3>
+                    <p class="font-bold text-slate-800">Pengurus OSIS</p>
+                    <p class="text-sm text-blue-600 font-semibold mb-2">SMA KP Baleendah</p>
+                    <p class="text-slate-500 text-xs italic">Aktif mengelola kegiatan sekolah.</p>
+                </section>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="mt-16 text-center pb-12 reveal">
+        <p class="text-slate-400 text-xs font-bold tracking-widest uppercase mb-2">
+            Alfathir Ibnu Atoillah &bull; 2026
+        </p>
+        <div class="w-12 h-1 bg-blue-200 mx-auto rounded-full"></div>
+    </footer>
+
+    <script>
+        // --- ANIMASI MENGETIK ---
+        const nameElement = document.getElementById('name-type');
+        const nameText = "Alfathir Ibnu Atoillah";
+        let index = 0;
+
+        function type() {
+            if (index < nameText.length) {
+                nameElement.innerHTML += nameText.charAt(index);
+                index++;
+                setTimeout(type, 100);
+            }
+        }
+
+        // --- SCROLL REVEAL ---
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const revealTop = el.getBoundingClientRect().top;
+                const revealPoint = 150;
+                if (revealTop < windowHeight - revealPoint) {
+                    el.classList.add('active');
+                    // Animate skill bars if this is the sidebar
+                    if(el.id === 'sidebar') {
+                        const bars = el.querySelectorAll('.skill-progress');
+                        bars.forEach(bar => {
+                            bar.style.width = bar.getAttribute('data-width');
+                        });
+                    }
+                }
+            });
+        }
+
+        // --- SIMPLE PARTICLES ---
+        function createParticle() {
+            const particle = document.createElement('div');
+            const size = Math.random() * 5 + 2;
+            particle.style.position = 'fixed';
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.background = 'rgba(59, 130, 246, 0.2)';
+            particle.style.borderRadius = '50%';
+            particle.style.top = '-10px';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.zIndex = '-1';
+            
+            const duration = Math.random() * 10 + 10;
+            particle.animate([
+                { transform: 'translateY(0vh)', opacity: 0 },
+                { transform: 'translateY(50vh)', opacity: 0.5 },
+                { transform: 'translateY(110vh)', opacity: 0 }
+            ], {
+                duration: duration * 1000,
+                easing: 'linear'
+            });
+
+            document.body.appendChild(particle);
+            setTimeout(() => particle.remove(), duration * 1000);
+        }
+
+        window.addEventListener('scroll', reveal);
+        window.addEventListener('load', () => {
+            type();
+            reveal();
+            setInterval(createParticle, 500);
+        });
+    </script>
+</body>
+</html>
